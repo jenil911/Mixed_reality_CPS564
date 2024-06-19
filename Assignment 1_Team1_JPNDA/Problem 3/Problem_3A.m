@@ -94,6 +94,23 @@ function flt_img = filterImage(filter_size, img_gray, filter_type)
                         flt_img(row, col) = med_val;
                     end
                 end
+                            % Determine if an alpha-trimmed mean filter is required
+            elseif (filter_type == "alpha_trimmed")
+                alpha = 2;
+                % Loop through each row of the input image
+                for row = indent+1:rows-indent
+                    % Loop through each column of the input image
+                    for col = indent+1:cols-indent
+                        neighbors = img_gray(row-indent:row+indent, col-indent:col+indent);
+                        % Sort the neighbors
+                        sorted_neighbors = sort(neighbors(:));
+                        % Remove the alpha highest and lowest values
+                        trimmed_neighbors = sorted_neighbors(alpha+1:end-alpha);
+                        % Compute the mean of the remaining values
+                        mean_val = mean(trimmed_neighbors);
+                        flt_img(row, col) = mean_val;
+                    end
+                end
 
             % If any other filter is requested abort
             else
