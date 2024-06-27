@@ -2,7 +2,7 @@ close all;
 clear all;
 clc;
 
-img = imread("tower.jpg");
+img = imread("");
 figure, imshow(img);
 
 sm = saliency(img);
