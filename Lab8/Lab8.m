@@ -2,7 +2,7 @@ close all;
 clear all;
 clc;
 
-img = imread("");
+img = imread("flower.jpg");
 figure, imshow(img);
 
 sm = saliency(img);
