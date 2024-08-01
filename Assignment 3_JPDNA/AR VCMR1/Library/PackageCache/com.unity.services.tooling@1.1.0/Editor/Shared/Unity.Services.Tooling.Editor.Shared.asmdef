@@ -1,0 +1,16 @@
+{
+    "name": "Unity.Services.Tooling.Editor.Shared",
+    "rootNamespace": "Unity.Services.Tooling.Editor.Shared",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

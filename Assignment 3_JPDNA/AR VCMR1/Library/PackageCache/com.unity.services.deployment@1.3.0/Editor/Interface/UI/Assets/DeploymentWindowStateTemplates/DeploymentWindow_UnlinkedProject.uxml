@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" dwc="Unity.Services.Deployment.UI.Components" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <ui:VisualElement class="center-content status-message__container">
+        <ui:VisualElement>
+            <ui:Label text="To deploy to Unity services, you must link your Unity project to a Project ID. Go to Project Settings to create a new Project ID or link to an existing one." class="status-message" />
+            <ui:VisualElement class="center-content status-button__container">
+                <ui:Button text="Project Settings..." />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

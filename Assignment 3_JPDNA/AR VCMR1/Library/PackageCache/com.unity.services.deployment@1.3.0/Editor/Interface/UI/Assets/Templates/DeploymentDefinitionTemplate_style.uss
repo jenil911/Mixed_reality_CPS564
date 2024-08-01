@@ -1,0 +1,25 @@
+.deployment-set{
+    flex-direction: column;
+}
+
+.deployment-label-container{
+    flex-direction: row;
+    padding: 6px 0px;
+    -unity-font-style: bold;
+}
+
+.deployment-set-selectable:checked .deployment-label-container {
+    color: var(--unity-colors-highlight-text-inactive);
+}
+
+.deployment-label-container:hover {
+    background-color: var(--unity-colors-highlight-background-hover);
+}
+
+.deployment-set-selectable {
+    flex-direction: column;
+}
+
+.deployment-set-container {
+    background-color: var(--unity-colors-window-background);
+}

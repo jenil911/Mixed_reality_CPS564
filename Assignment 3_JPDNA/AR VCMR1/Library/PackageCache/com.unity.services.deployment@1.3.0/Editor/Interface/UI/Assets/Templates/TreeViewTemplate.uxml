@@ -1,0 +1,18 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xmlns:dwc="Unity.Services.Deployment.Editor.Interface.UI.Components"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <ui:ScrollView class="tree-view-scroll-view">
+        <dwc:KeyboardShortcutsContainer name="KeyboardShortcuts">
+            <dwc:MultiSelect name="MultiSelectContainer" class="multi-select">
+                <ui:VisualElement content-container="true"/>
+            </dwc:MultiSelect>
+        </dwc:KeyboardShortcutsContainer>
+    </ui:ScrollView>
+</ui:UXML>

@@ -1,0 +1,20 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns="UnityEngine.UIElements"
+    xmlns:dwc="Unity.Services.Deployment.Editor.Interface.UI.Components"
+    editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentWindow_Style.uss" />
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <ui:VisualElement class="table-header__container">
+        <ui:Label text="Name" display-tooltip-when-elided="true" class="table-header__cell deployment-window-column-1" />
+        <ui:Label text="Service" display-tooltip-when-elided="true" class="table-header__cell deployment-window-column-2" />
+        <ui:Label text="Type" display-tooltip-when-elided="true" class="table-header__cell deployment-window-column-3" />
+        <ui:Label text="Deployment Status" display-tooltip-when-elided="true" class="table-header__cell deployment-window-column-4" />
+    </ui:VisualElement>
+    <ui:TwoPaneSplitView fixed-pane-index="0" fixed-pane-initial-dimension="200" orientation="Vertical">
+        <dwc:TreeViewElement name="DeploymentItemList" template="DeploymentItem" class="tree-view" />
+        <ui:ScrollView name="StatusPanel" class="scroll-view">
+            <ui:Label name="StatusLabel" class="status-label"/>
+        </ui:ScrollView>
+    </ui:TwoPaneSplitView>
+</ui:UXML>

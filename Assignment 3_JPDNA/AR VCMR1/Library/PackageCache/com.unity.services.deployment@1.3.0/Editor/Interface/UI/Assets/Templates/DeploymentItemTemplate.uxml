@@ -1,0 +1,35 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xmlns:dwc="Unity.Services.Deployment.Editor.Interface.UI.Components"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/Templates/DeploymentItemTemplate_style.uss" />
+    <dwc:Selectable text="" class="deployment-item-selectable">
+        <ui:VisualElement class="deployment-item-container row" style="width: initial;">
+            <ui:VisualElement class="deployment-window-column-1 row" style="padding-left: 38px">
+                <dwc:CheckmarkToggle labelName="ItemName"/>
+                <ui:VisualElement>
+                    <ui:Label text="Sit Amet" display-tooltip-when-elided="true" name="ItemName" class="deployment-item__label" />
+                    <ui:VisualElement name="ItemStateContainer"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Label text="Sit Amet" display-tooltip-when-elided="true" name="ItemService" class="deployment-item__label deployment-window-column-2" />
+            <ui:Label text="Sit Amet" display-tooltip-when-elided="true" name="ItemType" class="deployment-item__label deployment-window-column-3" />
+            <ui:VisualElement class="deployment-window-column-4" style="align-items: flex-start">
+                <ui:VisualElement name="ItemProgress" style="flex-direction: row; flex: 1 1 auto; width: 100%">
+                    <uie:ProgressBar low-value="0" class="deployment-item__progress-bar" />
+                </ui:VisualElement>
+                <ui:VisualElement class="deployment-item__status">
+                    <ui:VisualElement class="error-icon deployment-item__icon"/>
+                    <ui:VisualElement class="deployment-item__status-indicator" />
+                    <ui:Label text="Sit Amet" display-tooltip-when-elided="true" name="ItemStatus" class="deployment-item__label" style="-unity-text-align: middle-left;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </dwc:Selectable>
+</ui:UXML>

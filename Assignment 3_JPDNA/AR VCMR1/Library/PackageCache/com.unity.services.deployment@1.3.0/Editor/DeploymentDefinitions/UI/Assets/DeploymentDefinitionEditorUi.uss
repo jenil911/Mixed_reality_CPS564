@@ -1,0 +1,6 @@
+.apply-footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 8px;
+}

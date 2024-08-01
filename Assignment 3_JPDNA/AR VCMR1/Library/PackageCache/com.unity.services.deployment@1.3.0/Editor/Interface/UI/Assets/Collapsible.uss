@@ -1,0 +1,7 @@
+.collapsible{
+    flex-direction: column;
+}
+
+.collapsed {
+    display: none;
+}

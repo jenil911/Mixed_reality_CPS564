@@ -1,0 +1,19 @@
+:checked {
+    background-color: rgba(0,0,0,0);
+}
+
+.collapse-toggle {
+    background-image: var(--unity-icons-foldout-checked);
+    height: 14px;
+    width: 14px;
+    margin-left: 2px;
+    margin-right: 3px;
+}
+
+.uncollapse-toggle {
+    background-image: var(--unity-icons-foldout);
+    height: 14px;
+    width: 14px;
+    margin-left: 2px;
+    margin-right: 3px;
+}

@@ -1,0 +1,119 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.Services.DeploymentApi.Editor
+{
+    public struct AssetState
+    {
+        public string Description { get; }
+        public string Detail { get; }
+        public SeverityLevel Level { get; }
+        public AssetState(string description, string detail, SeverityLevel level) {}
+    }
+
+    public abstract class Command
+    {
+        public abstract string Name { get; }
+        protected Command() {}
+        public abstract System.Threading.Tasks.Task ExecuteAsync(System.Collections.Generic.IEnumerable<IDeploymentItem> items, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        public virtual bool IsEnabled(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+        public virtual bool IsVisible(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+    }
+
+    public abstract class Command<T> : Command where T : IDeploymentItem
+    {
+        protected Command() {}
+        public abstract System.Threading.Tasks.Task ExecuteAsync(System.Collections.Generic.IEnumerable<T> items, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        public System.Threading.Tasks.Task ExecuteAsync(System.Collections.Generic.IEnumerable<IDeploymentItem> items, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        public virtual bool IsEnabled(System.Collections.Generic.IEnumerable<T> items);
+        public bool IsEnabled(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+        public virtual bool IsVisible(System.Collections.Generic.IEnumerable<T> items);
+        public bool IsVisible(System.Collections.Generic.IEnumerable<IDeploymentItem> items);
+    }
+
+    public class DeploymentItem : IDeploymentItem, ITypedItem, System.ComponentModel.INotifyPropertyChanged
+    {
+        protected string m_Name;
+        protected string m_Path;
+        protected float m_Progress;
+        protected System.Collections.ObjectModel.ObservableCollection<AssetState> m_States;
+        protected DeploymentStatus m_Status;
+        protected string m_Type;
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        public virtual string Name { get; set; }
+        public virtual string Path { get; set; }
+        public virtual float Progress { get; set; }
+        public System.Collections.ObjectModel.ObservableCollection<AssetState> States { get; }
+        public virtual DeploymentStatus Status { get; set; }
+        public string Type { get; set; }
+        public DeploymentItem() {}
+        protected void SetField<T>(ref T field, T value, System.Action<T> onFieldChanged = default(System.Action<T>), string propertyName = default(string));
+    }
+
+    public static class DeploymentItemExtensions
+    {
+        public static void SetStatusDescription(this IDeploymentItem self, string description);
+        public static void SetStatusDetail(this IDeploymentItem self, string detail);
+        public static void SetStatusSeverity(this IDeploymentItem self, SeverityLevel severityLevel);
+    }
+
+    public abstract class DeploymentProvider
+    {
+        public System.Collections.ObjectModel.ObservableCollection<Command> Commands { get; }
+        public abstract Command DeployCommand { get; }
+        public System.Collections.ObjectModel.ObservableCollection<IDeploymentItem> DeploymentItems { get; }
+        public virtual Command OpenCommand { get; }
+        public abstract string Service { get; }
+        public virtual Command SyncItemsWithRemoteCommand { get; }
+        public virtual Command ValidateCommand { get; }
+        protected DeploymentProvider() {}
+        protected DeploymentProvider(System.Collections.ObjectModel.ObservableCollection<IDeploymentItem> deploymentItems = default(System.Collections.ObjectModel.ObservableCollection<IDeploymentItem>), System.Collections.ObjectModel.ObservableCollection<Command> commands = default(System.Collections.ObjectModel.ObservableCollection<Command>)) {}
+    }
+
+    public class Deployments
+    {
+        public System.Collections.ObjectModel.ObservableCollection<DeploymentProvider> DeploymentProviders { get; }
+        public IEnvironmentProvider EnvironmentProvider { get; set; }
+        public static Deployments Instance { get; }
+    }
+
+    public struct DeploymentStatus
+    {
+        public static readonly DeploymentStatus Empty;
+        public static readonly DeploymentStatus FailedToDeploy;
+        public static readonly DeploymentStatus ModifiedLocally;
+        public static readonly DeploymentStatus UpToDate;
+        public string Message { get; }
+        public string MessageDetail { get; }
+        public SeverityLevel MessageSeverity { get; }
+        public DeploymentStatus(string message = default(string), string messageDetail = default(string), SeverityLevel messageSeverity = SeverityLevel.None) {}
+    }
+
+    public interface IDeploymentItem : System.ComponentModel.INotifyPropertyChanged
+    {
+        public string Name { get; }
+        public string Path { get; }
+        public float Progress { get; }
+        public System.Collections.ObjectModel.ObservableCollection<AssetState> States { get; }
+        public DeploymentStatus Status { get; set; }
+    }
+
+    public interface IEnvironmentProvider
+    {
+        public string Current { get; }
+    }
+
+    public interface ITypedItem
+    {
+        public string Type { get; }
+    }
+
+    public enum SeverityLevel
+    {
+        Error = 3,
+        Info = 1,
+        None = 0,
+        Success = 4,
+        Warning = 2,
+    }
+}

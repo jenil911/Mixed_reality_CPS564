@@ -1,0 +1,18 @@
+{
+    "name": "Unity.Services.Deployment.Core",
+    "rootNamespace": "Unity.Services.Deployment.Core",
+    "references": [
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+    ],
+    "versionDefines": [],
+    "noEngineReferences": true
+}

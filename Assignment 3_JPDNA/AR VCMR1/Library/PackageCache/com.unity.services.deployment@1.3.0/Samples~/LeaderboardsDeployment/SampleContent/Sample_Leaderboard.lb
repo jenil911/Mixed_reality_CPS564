@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ugs-config-schemas.unity3d.com/v1/leaderboards.schema.json",
+  "SortOrder": "asc",
+  "UpdateType": "keepBest",
+  "TieringConfig": {
+    "Strategy": "score",
+    "Tiers": [
+      {
+        "Id": "Gold",
+        "Cutoff": 200.0
+      },
+      {
+        "Id": "Silver",
+        "Cutoff": 100.0
+      },
+      {
+        "Id": "Bronze"
+      }
+    ]
+  },
+  "Name": "leaderboard_config",
+  "Id": "Sample_Leaderboard"
+}

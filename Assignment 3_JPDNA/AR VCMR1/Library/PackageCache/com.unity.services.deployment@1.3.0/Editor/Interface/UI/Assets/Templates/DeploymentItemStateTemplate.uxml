@@ -1,0 +1,18 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xmlns:dwc="Unity.Services.Deployment.Editor.Interface.UI.Components"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+    <ui:VisualElement name="ItemWarning" class="deployment-item__asset-state">
+        <ui:VisualElement class="warning-icon deployment-item__icon"/>
+        <ui:Label text="Sit Amet" display-tooltip-when-elided="true" name="ItemWarningLabel" class="deployment-item__label" />
+    </ui:VisualElement>
+    <ui:VisualElement name="ItemError" class="deployment-item__asset-state">
+        <ui:VisualElement class="error-icon deployment-item__icon"/>
+        <ui:Label text="Sit Amet" display-tooltip-when-elided="true" name="ItemErrorLabel" class="deployment-item__error-label deployment-item__label" />
+    </ui:VisualElement>
+</ui:UXML>

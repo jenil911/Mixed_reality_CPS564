@@ -1,0 +1,24 @@
+{
+    "name": "Unity.Services.Deployment",
+    "rootNamespace": "Unity.Services.Deployment.Editor",
+    "references": [
+        "Unity.Services.DeploymentApi",
+        "Unity.Services.Core.Editor",
+        "UnityEngine.UnityAnalyticsModule",
+        "Unity.Services.Core.Environments.Editor",
+        "Unity.Services.Deployment.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "UNITY_2021_3_OR_NEWER"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

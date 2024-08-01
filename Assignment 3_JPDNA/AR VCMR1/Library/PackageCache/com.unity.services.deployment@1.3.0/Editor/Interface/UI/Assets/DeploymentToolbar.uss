@@ -1,0 +1,16 @@
+:root {
+    height: 100%;
+}
+
+.help-button {
+    border-right-width: 0;
+}
+
+.help-button-image {
+    width: 16px;
+    height: 16px;
+}
+
+.deployment-toolbar__content {
+    height: 100%;
+}

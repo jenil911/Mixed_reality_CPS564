@@ -1,0 +1,26 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xmlns:dwc="Unity.Services.Deployment.Editor.Interface.UI.Components"
+    xsi="http://www.w3.org/2001/XMLSchema-instance"
+    engine="UnityEngine.UIElements"
+    editor="UnityEditor.UIElements"
+    noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
+    editor-extension-mode="False">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/Templates/DeploymentDefinitionTemplate_style.uss"/>
+    <ui:VisualElement name="DeploymentSet" class="deployment-set">
+        <dwc:Collapsible name="DeploymentSetHeader" class="collapsible" containerClass="deployment-set-container">
+            <dwc:Selectable name="DeploymentSetSelectable" class="deployment-set-selectable">
+                <dwc:CheckmarkToggleGroup labelName="DeploymentSetName">
+                    <ui:VisualElement name="DeploymentLabelContainer" class="deployment-label-container">
+                        <dwc:CollapseToggle/>
+                        <dwc:CheckmarkToggle class="checkmark-toggle-header" labelName="DeploymentSetName" isHeader="true"/>
+                        <ui:Label name="DeploymentSetName" class="deployment-set-name"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="DeploymentSetContainer" class="deployment-set-container"/>
+                </dwc:CheckmarkToggleGroup>
+            </dwc:Selectable>
+        </dwc:Collapsible>
+    </ui:VisualElement>
+</ui:UXML>

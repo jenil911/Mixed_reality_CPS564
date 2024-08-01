@@ -1,0 +1,33 @@
+{
+    "name": "Sample_CloudCodeScriptsHello",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Services.Authentication",
+        "Unity.Services.Core",
+        "Unity.Services.CloudCode",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "CLOUD_CODE_SCRIPTS_PRESENT",
+        "AUTHENTICATION_PRESENT"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.services.cloudcode",
+            "expression": "2.3.2",
+            "define": "CLOUD_CODE_SCRIPTS_PRESENT"
+        },
+        {
+            "name": "com.unity.services.authentication",
+            "expression": "3.1.0",
+            "define": "AUTHENTICATION_PRESENT"
+        }
+    ],
+    "noEngineReferences": false
+}

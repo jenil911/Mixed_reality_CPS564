@@ -1,0 +1,27 @@
+:checked {
+    background-color: rgba(0,0,0,0);
+}
+
+.checkmark-toggle-checked {
+    background-image: var(--unity-icons-toggle-checked);
+    height: 14px;
+    width: 14px;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+.checkmark-toggle-unchecked {
+    background-image: var(--unity-icons-toggle_bg);
+    height: 14px;
+    width: 14px;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+.checkmark-toggle-mixed {
+    background-image: var(--unity-icons-toggle_bg-mixed);
+    height: 14px;
+    width: 14px;
+    margin-left: 2px;
+    margin-right: 5px;
+}

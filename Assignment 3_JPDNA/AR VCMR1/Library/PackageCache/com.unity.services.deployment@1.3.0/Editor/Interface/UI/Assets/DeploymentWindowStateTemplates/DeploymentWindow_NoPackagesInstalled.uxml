@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" dwc="Unity.Services.Deployment.UI.Components" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <ui:VisualElement class="center-content status-message__container">
+        <ui:VisualElement>
+            <ui:Label text="There are no packages installed with deployable functionality. View the documentation for a full list of supported packages." class="status-message" />
+            <ui:VisualElement class="center-content">
+                <ui:Button name="DocumentationButton" text="Documentation" class="link-text" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

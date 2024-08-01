@@ -1,0 +1,6 @@
+{
+  "$schema": "https://ugs-config-schemas.unity3d.com/v1/economy/economy-currency.schema.json",
+  "initial": 1,
+  "max": 50,
+  "name": "My Currency"
+}

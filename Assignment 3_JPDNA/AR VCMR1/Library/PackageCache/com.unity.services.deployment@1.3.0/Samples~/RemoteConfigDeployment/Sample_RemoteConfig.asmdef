@@ -1,0 +1,33 @@
+{
+    "name": "Sample_RemoteConfig",
+    "rootNamespace": "",
+    "references": [
+        "Unity.Services.Authentication",
+        "Unity.Services.Core",
+        "Unity.Services.RemoteConfig",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "AUTHENTICATION_PRESENT",
+        "REMOTE_CONFIG_PRESENT"
+    ],
+    "versionDefines": [
+        {
+            "name": "com.unity.services.authentication",
+            "expression": "3.1.0",
+            "define": "AUTHENTICATION_PRESENT"
+        },
+        {
+            "name": "com.unity.remote-config-runtime",
+            "expression": "4.0.0",
+            "define": "REMOTE_CONFIG_PRESENT"
+        }
+    ],
+    "noEngineReferences": false
+}

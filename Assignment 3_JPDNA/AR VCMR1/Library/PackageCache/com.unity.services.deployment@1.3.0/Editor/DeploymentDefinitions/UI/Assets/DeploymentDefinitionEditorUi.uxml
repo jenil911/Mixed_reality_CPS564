@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/DeploymentDefinitions/UI/Assets/DeploymentDefinitionEditorUi.uss" />
+
+    <uie:PropertyField binding-path="m_DefinitionName" label="Name" focusable="true" />
+    <ui:ListView name="Exclude Paths" show-foldout-header="true" header-title="Exclude Paths" reorderable="false" show-border="true" show-add-remove-footer="true" fixed-item-height="18" horizontal-scrolling="false" class="exclude-list"/>
+
+    <ui:VisualElement name="Apply Footer" class="apply-footer__container">
+        <ui:Button name="Revert" text="Revert" class="revert-button" />
+        <ui:Button name="Apply" text="Apply" class="apply-button" />
+    </ui:VisualElement>
+</ui:UXML>

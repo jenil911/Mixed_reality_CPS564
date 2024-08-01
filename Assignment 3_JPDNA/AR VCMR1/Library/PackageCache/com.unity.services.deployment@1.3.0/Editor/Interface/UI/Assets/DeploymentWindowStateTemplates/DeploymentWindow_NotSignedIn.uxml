@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xmlns="UnityEngine.UIElements" dwc="Unity.Services.Deployment.UI.Components" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <ui:VisualElement class="center-content status-message__container">
+        <ui:VisualElement>
+            <ui:Label text="Not signed in." class="status-message" />
+            <ui:VisualElement class="center-content status-button__container">
+                <ui:Button text="Sign in" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

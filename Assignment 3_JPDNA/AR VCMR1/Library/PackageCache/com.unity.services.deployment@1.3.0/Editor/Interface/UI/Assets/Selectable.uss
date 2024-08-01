@@ -1,0 +1,17 @@
+:checked,
+:checked:hover
+{
+    background-color: var(--unity-colors-highlight-background);
+}
+
+Toggle {
+    margin: 0 !important;
+}
+
+.unity-toggle__input {
+    display: none;
+}
+
+:root {
+    margin: 0;
+}

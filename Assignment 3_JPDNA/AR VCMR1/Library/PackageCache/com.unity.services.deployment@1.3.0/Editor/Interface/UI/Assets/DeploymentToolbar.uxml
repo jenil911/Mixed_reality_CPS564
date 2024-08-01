@@ -1,0 +1,19 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns:uie="UnityEditor.UIElements"
+    xmlns="UnityEngine.UIElements"
+    xmlns:coreUi="Unity.Services.Core.Editor.Environments.UI"
+    editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentToolbar.uss" />
+    <uie:Toolbar>
+        <uie:ToolbarButton text="Deploy Selected" name="DeploySelectedButton" class="toolbar-button"/>
+        <uie:ToolbarButton text="Deploy All" name="DeployAllButton" class="toolbar-button"/>
+        <uie:ToolbarSpacer class="grow" />
+        <coreUi:EnvironmentView />
+        <uie:ToolbarButton name="HelpButton" class="toolbar-button help-button">
+            <ui:VisualElement name="HelpButtonImage" class="help-button-image"/>
+        </uie:ToolbarButton>
+        <uie:ToolbarMenu class="menu" />
+    </uie:Toolbar>
+    <ui:VisualElement content-container="true" class="deployment-toolbar__content"/>
+</ui:UXML>

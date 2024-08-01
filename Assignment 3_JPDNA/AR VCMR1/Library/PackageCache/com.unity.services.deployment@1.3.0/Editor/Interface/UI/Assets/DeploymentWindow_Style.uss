@@ -1,0 +1,58 @@
+DeploymentView {
+    min-width: 275px;
+}
+
+.tree-view {
+    flex-grow: 1;
+    min-height: 100px;
+}
+
+ToolbarSearchField.deployment-window-search-bar {
+}
+
+.table-header__container {
+    display: flex;
+    flex-direction: row;
+    padding: 3px 0px;
+    background-color: var(--unity-colors-toolbar-background);
+    border-bottom-color: var(--unity-colors-toolbar-border);
+    border-bottom-width: 1px;
+    min-height: 28px;
+}
+
+.table-header__cell {
+    color: var(--unity-colors-label-text);
+    padding: 6px 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.scroll-view {
+    min-height: 40px;
+    margin-top: 6px;
+    padding: 2px 4px;
+}
+
+.toolbar-button {
+    -unity-text-align: middle-center;
+}
+
+.dropdown-container {
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+/* Unset default css*/
+ToolbarMenu.menu VisualElement.unity-toolbar-menu__arrow {
+    background-image: none;
+    width: auto;
+}
+
+EnvironmentView {
+    justify-content: space-around;
+}
+
+EnvironmentView ToolbarMenu {
+    height: 21px;
+}

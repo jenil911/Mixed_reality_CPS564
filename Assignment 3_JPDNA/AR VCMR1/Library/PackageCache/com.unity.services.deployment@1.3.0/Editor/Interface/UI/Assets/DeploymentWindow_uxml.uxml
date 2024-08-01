@@ -1,0 +1,22 @@
+<ui:UXML
+    xmlns:ui="UnityEngine.UIElements"
+    xmlns="UnityEngine.UIElements"
+    xmlns:dwv="Unity.Services.Deployment.Editor.Interface.UI.Views"
+    editor-extension-mode="True">
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentWindow_Style.uss" />
+    <Style src="project://database/Packages/com.unity.services.deployment/Editor/Interface/UI/Assets/DeploymentShared_style.uss" />
+    <dwv:DeploymentToolbar>
+        <dwv:DeploymentView class="grow" />
+        <ui:VisualElement name="EmptyListState" class="grow hidden">
+            <ui:VisualElement class="center-content status-message__container">
+                <ui:Label text="No deployable assets within this Project." class="status-message" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <dwv:EnvironmentNotSetView class="grow hidden" />
+        <dwv:UnlinkedProjectView class="grow hidden" />
+        <dwv:NoConnectionView class="grow hidden" />
+        <dwv:NotSignedInView class="grow hidden" />
+        <dwv:MultipleDefinitionsView class="grow hidden"/>
+        <dwv:NoPackagesInstalledView class="grow hidden"/>
+    </dwv:DeploymentToolbar>
+</ui:UXML>
